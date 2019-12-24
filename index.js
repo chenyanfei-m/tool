@@ -1,8 +1,26 @@
-// uri parse
+// parse uri
 import URI from 'urijs'
+
+// parse html
+import {jsdom} from 'jsdom'
+
+// time convert
+import 'dayjs'
+
 // user agent
 import device from 'current-device'
 
+// vconsole webpack plugin
+var VConsolePlugin = require('cy-vconsole-webpack-plugin')
+var { argv } = require('yargs')
+
+module.exports.plugins.push(new VConsolePlugin({
+  // enabled: process.env.NODE_ENV === 'development'
+  enabled: argv && argv.vconsole
+}))
+
+
+// snippets
 export default {
   isWeiXin() {
     var ua = window.navigator.userAgent.toLowerCase();
