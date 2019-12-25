@@ -7,6 +7,9 @@ import {jsdom} from 'jsdom'
 // time convert
 import 'dayjs'
 
+// color convert
+import 'color'
+
 // user agent
 import device from 'current-device'
 
